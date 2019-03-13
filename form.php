@@ -96,9 +96,9 @@
 			      <td><?php echo $r['feed']; ?></td>
 			      <td>
 			      	<div>
-								<button type="button" class="btn btn-light" data-toggle="modal" data-target="#moge-modal">クリックで送信formを開きます。</button>
+								<button type="button" class="btn btn-light" data-toggle="modal" data-target="#moge-modal<?php echo $r['id']; ?>">クリックで送信formを開きます。</button>
 							</div>
-							<div class="modal fade" id="moge-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal fade" id="moge-modal<?php echo $r['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							  <div class="modal-dialog" role="document">
 							    <div class="modal-content">
 							      <div class="modal-header">
@@ -108,12 +108,12 @@
 							        </button>
 							      </div>
 							      <div class="modal-body">
-											<form id="moge" action="form_update.php?feed_update=<?php echo $r['id']; ?>" method="POST">
+											<form id="moge<?php echo $r['id']; ?>" action="form_update.php?feed_update=<?php echo $r['id']; ?>" method="POST">
 												<label for="">formタグ外のボタンからテキストを送信したい。</label>
 												<input type="text" class="form-control" name="feed_update">
 											</form>
 											<div>
-												<button type="submit" class="btn btn-light" form="moge">submit</button>
+												<button type="submit" class="btn btn-light" form="moge<?php echo $r['id']; ?>">submit</button>
 											</div>
 							      </div>
 							      <div class="modal-footer">
