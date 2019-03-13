@@ -60,13 +60,10 @@
 								<label for="">formタグ外のボタンからテキストを送信したい。</label>
 								<input type="text" class="form-control" name="feed">
 							</form>
-							<div>
-								<button type="submit" class="btn btn-light" form="hoge">submit</button>
-							</div>
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-			        <button type="button" class="btn btn-primary">変更を保存</button>
+			        <button type="submit" class="btn btn-primary" form="hoge">submit</button>
 			      </div>
 			    </div>
 			  </div>
@@ -106,13 +103,10 @@
 												<label for="">formタグ外のボタンからテキストを送信したい。</label>
 												<input type="text" class="form-control" name="feed_update">
 											</form>
-											<div>
-												<button type="submit" class="btn btn-light" form="moge<?php echo $r['id']; ?>">submit</button>
-											</div>
 							      </div>
 							      <div class="modal-footer">
 							        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-							        <button type="button" class="btn btn-primary">変更を保存</button>
+							        <button type="submit" class="btn btn-primary" form="moge<?php echo $r['id']; ?>">submit</button>
 							      </div>
 							    </div>
 							  </div>
